@@ -35,9 +35,6 @@ jobs:
 
             test -f ./npm/${abi}/index.farm
           done
-
-      - name: Install Dependencies
-        run: npm install -g pnpm@8.15.1 && pnpm i --frozen-lockfile
       
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -48,12 +45,16 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: yarn
+        run: npm install -g pnpm@8.15.1 && pnpm i --frozen-lockfile
+
+      - name: Install Dependencies
+        run: pnpm
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
+          version: pnpm run bump
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm release
         env:

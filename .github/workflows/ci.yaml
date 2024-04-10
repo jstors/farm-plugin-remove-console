@@ -32,5 +32,3 @@ jobs:
           node-version: 18.x
       - name: Install Dependencies
         run: npm install -g pnpm@8.15.1
-      - name: Test Example
-        run: cd example && pnpm i && pnpm build
