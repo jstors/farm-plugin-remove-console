@@ -1,6 +1,6 @@
 {
   "name": "farm-plugin-remove-console",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "scripts/index.js",
   "types": "scripts/index.d.ts",
   "type": "module",
@@ -31,7 +31,7 @@
   },
   "scripts": {
     "build": "farm-plugin-tools build --platform --cargo-name farm_plugin_remove_console -p farm_plugin_remove_console --release",
-    "bump":"npx changeset version",
+    "bump": "npx changeset version",
     "release": "pnpm build && npm config set access public && npx changeset publish",
     "prepublishOnly": "farm-plugin-tools prepublish"
   },
