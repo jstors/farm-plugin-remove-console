@@ -32,7 +32,7 @@
   "scripts": {
     "build": "farm-plugin-tools build --platform --cargo-name farm_plugin_remove_console -p farm_plugin_remove_console --release",
     "bump": "npx changeset version",
-    "release": "pnpm build && npm config set access public && npx changeset publish",
+    "release": "npm config set access public && npx changeset publish",
     "prepublishOnly": "farm-plugin-tools prepublish"
   },
   "files": [
