@@ -26,7 +26,6 @@ jobs:
       # batch download artifacts
       - uses: actions/download-artifact@v3
         with:
-          name: ${{ github.sha }}-${{ matrix.settings.abi }}-plugin
           path: /tmp/artifacts
       - name: Move Artifacts
         run: |
