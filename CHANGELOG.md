@@ -1,5 +1,11 @@
 # farm-plugin-remove-console
 
+## 0.1.2
+
+### Patch Changes
+
+- 22b3d3c: choer: update ci
+
 ## 0.1.1
 
 ### Patch Changes
