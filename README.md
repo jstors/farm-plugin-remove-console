@@ -2,12 +2,13 @@
 
 Remove all console.log in the production environment .
 
-## feature options
-- [x] include
-- [x] exclude
-- [ ] customRegex
 
-## 
+## Usage 
+
+```shell
+pnpm install -D farm-plugin-remove-console
+```
+
 ```ts
 
 export default defineConfig({
@@ -23,3 +24,10 @@ export default defineConfig({
 });
 
 ```
+
+
+
+## feature options
+- [x] include
+- [x] exclude
+- [ ] customRegex
