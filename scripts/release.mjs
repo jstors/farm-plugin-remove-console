@@ -1,6 +1,6 @@
 import {execSync} from 'child_process';
 
-const npmToken = process.env.NODE_AUTH_TOKEN;
+const npmToken = process.env.NPM_TOKEN;
 
 if (!npmToken) {
   console.error('NPM_TOKEN 环境变量未设置！');
