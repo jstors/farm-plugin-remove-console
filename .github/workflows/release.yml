@@ -48,7 +48,7 @@ jobs:
         run: npm install -g pnpm@8.15.1 && pnpm i --frozen-lockfile
 
       - name: Publish to npm
-        run: npm bump && npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} && npm publish
+        run: pnpm bump && npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} && npm publish
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
