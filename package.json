@@ -32,7 +32,6 @@
   "scripts": {
     "build": "farm-plugin-tools build --platform --cargo-name farm_plugin_remove_console -p farm_plugin_remove_console --release",
     "bump": "npx changeset version",
-    "release": "node ./scripts/release.mjs",
     "prepublishOnly": "farm-plugin-tools prepublish"
   },
   "files": [

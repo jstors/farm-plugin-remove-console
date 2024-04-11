@@ -35,9 +35,6 @@ jobs:
 
             test -f ./npm/${abi}/index.farm
           done
-      
-      - name: Checkout Repo
-        uses: actions/checkout@v3
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v3
@@ -47,8 +44,11 @@ jobs:
       - name: Install Dependencies
         run: npm install -g pnpm@8.15.1 && pnpm i --frozen-lockfile
 
+      - name: Create .npmrc file
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - name: Publish to npm
-        run: pnpm bump && npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} && npm publish
+        run: pnpm bump && npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} && npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
