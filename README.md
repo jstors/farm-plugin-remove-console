@@ -1,5 +1,9 @@
 # farm-plugin-remove-console
 
+![NPM Version](https://img.shields.io/npm/v/farm-plugin-remove-console)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/jstors/farm-plugin-remove-console/build.yaml)
+
+
 Remove all console.log in the production environment .
 
 
