@@ -8,11 +8,17 @@ dependencies:
   '@changesets/cli':
     specifier: ^2.27.1
     version: 2.27.1
+  '@farmfe/utils':
+    specifier: ^0.0.1
+    version: 0.0.1
+  cac:
+    specifier: ^6.7.14
+    version: 6.7.14
 
 devDependencies:
   '@farmfe/plugin-tools':
-    specifier: latest
-    version: 0.0.4
+    specifier: ^0.0.5
+    version: 0.0.5
 
 packages:
 
@@ -229,12 +235,16 @@ packages:
       prettier: 2.8.8
     dev: false
 
-  /@farmfe/plugin-tools@0.0.4:
-    resolution: {integrity: sha512-NQ8lqpShR+fkQlcr1qbthtiEGh7+vMU/22cbhK6T3UHilQqffEGZAqlKqrDUhp3iD0fROpkK1U9HR9YYQJ1XGQ==}
+  /@farmfe/plugin-tools@0.0.5:
+    resolution: {integrity: sha512-8R3oKTXr4wecnj9LyoI/uPu7w7/NDqfIv7PNX9C3TfC7OKHehKFYMD/xmQsgVFKBV+PsSEETDqhoRINFOx1cfQ==}
     hasBin: true
     dependencies:
       '@napi-rs/cli': 2.18.0
     dev: true
+
+  /@farmfe/utils@0.0.1:
+    resolution: {integrity: sha512-QLbgNrojcvxfumXA/H329XAXhoCahmeSH3JmaiwwJEGS2QAmWfgAJMegjwlt6OmArGVO4gSbJ7Xbmm1idZZs+g==}
+    dev: false
 
   /@manypkg/find-root@1.1.0:
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
@@ -396,6 +406,11 @@ packages:
     resolution: {integrity: sha512-yjxDAYyK/pBvws9H4xKYpLDpYKEH6CzrBPAuXq3x18I+c/2MkVtT3qAr7Oloi6Dss9qNhPVueAAVU1CSeNDIXw==}
     dependencies:
       wcwidth: 1.0.1
+    dev: false
+
+  /cac@6.7.14:
+    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
+    engines: {node: '>=8'}
     dev: false
 
   /call-bind@1.0.7:

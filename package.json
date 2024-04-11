@@ -6,14 +6,14 @@
   "type": "module",
   "license": "MIT",
   "devDependencies": {
-    "@farmfe/plugin-tools": "latest"
+    "@farmfe/plugin-tools": "^0.0.5"
   },
   "napi": {
     "name": "farm_plugin_remove_console",
     "triples": {
       "additional": [
         "aarch64-apple-darwin",
-        "aarch64-unknown-linux-gnu",
+        "aarch64-unknown-linux-gnu",ƒ
         "aarch64-unknown-linux-musl",
         "x86_64-unknown-linux-musl",
         "i686-pc-windows-msvc",
@@ -39,6 +39,8 @@
     "scripts"
   ],
   "dependencies": {
-    "@changesets/cli": "^2.27.1"
+    "@changesets/cli": "^2.27.1",
+    "@farmfe/utils": "^0.0.1",
+    "cac": "^6.7.14"
   }
 }
