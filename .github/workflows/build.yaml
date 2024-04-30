@@ -58,7 +58,7 @@ jobs:
             zig: true
           # macos
           - os: macos-latest
-            abi: darwin-arm64
+            abi: darwin-x64
             target: aarch64-apple-darwin
             zig: false
           # - os: ubuntu-latest
