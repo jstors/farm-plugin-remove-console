@@ -2,9 +2,9 @@ export interface IOptions {
     /**
      * The path to the root of the project
      */
-    include: string[],
+    include?: string[],
     /**
      * exclude the path from the project
      */
-    exclude: string[]
+    exclude?: string[]
 }
