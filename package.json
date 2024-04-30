@@ -35,7 +35,8 @@
     "prepublishOnly": "farm-plugin-tools prepublish"
   },
   "files": [
-    "scripts"
+    "scripts",
+    "options.d.ts"
   ],
   "dependencies": {
     "@changesets/cli": "^2.27.1",
