@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'fs';
 import { createRequire } from 'module';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { farmPluginRemoveConsole } from '.';
 
 const { platform, arch } = process;
 const currentDir = dirname(fileURLToPath(import.meta.url));
@@ -120,5 +121,5 @@ switch (platform) {
   default:
     throw new Error(`Unsupported OS: ${platform}, architecture: ${arch}`);
 }
-
-export default (options)=> [binPath,options];
+export const farmPluginRemoveConsole = (options)=> [binPath,options]
+export default binPath;
