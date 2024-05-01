@@ -2,7 +2,6 @@ import { existsSync, readFileSync } from 'fs';
 import { createRequire } from 'module';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { farmPluginRemoveConsole } from '.';
 
 const { platform, arch } = process;
 const currentDir = dirname(fileURLToPath(import.meta.url));
