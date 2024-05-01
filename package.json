@@ -1,6 +1,6 @@
 {
   "name": "farm-plugin-remove-console",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "scripts/index.js",
   "types": "scripts/index.d.ts",
   "type": "module",
