@@ -37,7 +37,7 @@ impl FarmPluginRemoveConsole {
     let options: RemoveConsoleOptions = serde_json::from_str(&options).unwrap_or_default();
     Self {
       options,
-      regex: Regex::new(r"console\.log\([^)]*\)").unwrap(),
+      regex: Regex::new(r#"console\.log\((.*)\)"#).unwrap(),
     }
   }
 }
