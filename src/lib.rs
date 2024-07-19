@@ -33,7 +33,7 @@ impl Default for RemoveConsoleOptions {
 }
 
 impl FarmPluginRemoveConsole {
-  fn new(config: &Config, options: String) -> Self {
+  fn new(_config: &Config, options: String) -> Self {
     let options: RemoveConsoleOptions = serde_json::from_str(&options).unwrap_or_default();
     Self {
       options,

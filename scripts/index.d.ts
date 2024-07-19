@@ -1,4 +1,3 @@
-import type { IOptions } from "../options";
-declare const binPath: string;
-export const farmPluginRemoveConsole: (options?: IOptions) =>[string, typeof options];
+import type { IPluginOptions } from '../options.d';
+declare const binPath: (options?: IPluginOptions) => [string, IPluginOptions];
 export default binPath;

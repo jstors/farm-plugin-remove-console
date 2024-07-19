@@ -36,19 +36,8 @@ jobs:
             test -f ./npm/${abi}/index.farm
           done
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
       - name: Install Dependencies
-        run: npm install -g pnpm@8.15.1 && pnpm i --frozen-lockfile
-
-      - name: Create .npmrc file
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+        run: npm install -g pnpm@9.1.0 && pnpm i --frozen-lockfile
 
       - name: Publish to npm
         run: npm set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} && npm publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
